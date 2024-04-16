@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #file-div {
+            /* border: 1px solid black; */
+            display: flex;
+            width: 700px;
+            height: 35px;
+        }
+        #file-div #file-label{
+            display: none;
+        }
+        #file-div #chose {
+            width: 500px;
+            height: 35px;
+            padding-left: 10px;
+            box-sizing: border-box;
+        }
+
+        #file-div label {
+            width: 100px;
+            height: 35px;
+            background-color: #383838;
+            display: block;
+            color: white;
+            font-weight: 700;
+            text-align: center;
+            padding:8px 0;
+            box-sizing: border-box;
+            letter-spacing: -2px;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="file-div">
+
+        <label for="file-label">파일 선택</label>
+        <input type="file" id="file-label" name="file-text">
+        <input type="text" placeholder="선택된 파일 없음" id="chose" disabled>
+
+    </div>
+
+    <script>
+        const fileupload = document.getElementById('file-label')
+        const input = document.querySelector('#chose')
+        
+        fileupload.addEventListener('change',function () {
+            console.log(fileupload.value)
+            input.value=fileupload.value;
+        })
+        
+    </script>
+</body>
+</html>

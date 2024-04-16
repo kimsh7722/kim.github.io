@@ -1,0 +1,29 @@
+#file-div {
+    /* border: 1px solid black; */
+    display: flex;
+    width: 700px;
+    height: 35px;
+}
+#file-div #file-label{
+    display: none;
+}
+#file-div #inputChange {
+    width: 500px;
+    height: 35px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+#file-div label {
+    width: 100px;
+    height: 35px;
+    background-color: #383838;
+    display: block;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    padding:8px 0;
+    box-sizing: border-box;
+    letter-spacing: -2px;
+    font-size: 15px;
+}

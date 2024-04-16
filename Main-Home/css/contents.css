@@ -1,0 +1,489 @@
+/* 폰트 적용 */
+/* font Style 한번에 처리후 font-family에 저장되어 자유롭게 쓸수 있다 */
+@font-face {
+    /* font명 지정 */
+    font-family:'C-Light';
+    /* font 경로 지정 */
+    src:url('../font/CormorantGaramond-Light.ttf')
+}
+@font-face {
+    /* font명 지정 */
+    font-family:'C-Medium';
+    /* font 경로 지정 */
+    src:url('../font/CormorantGaramond-Medium.ttf')
+}
+
+/* 전체 p,span태그 지정 */
+p,span {
+    /* 화면 출력 세로지정 */
+    display: block;
+}
+
+/* class선택자 contents */
+.contents{
+    /* 넓이 100% */
+    width: 100%;
+    /* 태두리 스타일 결정 */
+    /* border: 1px solid black; */
+}
+
+/* 동등 선택자 #content-top,#content-mid,#content-bottom을 공용으로 쓴다 */
+#content-top,#content-mid,#content-bottom
+{
+    /* 넓이 100%지정 */
+    width: 100%;
+}
+
+
+/* Content-TOP!! */
+#content-top{
+    /* 테두리 결정 */
+    /* border: 1px solid black; */
+    /* 높이 결정 */
+    height: 100vh;
+    /* 배경색 이미지를 url(경로,자원저장소)불러온다 */
+    background-image:url('../image/KakaoTalk_20221214_114740406.jpg') ;
+    /* 배경색 사이즈 영역크기와 같게 한다 */
+    background-size: cover;
+    /* 요소의 내부 위로 17%맞춘다 */
+    padding-top: 17%;
+}
+/* > : 자식선택자 - #content-top의 하위요소 img*/
+#content-top>img {
+    /* 넓이 100% */
+    width: 100%;
+    /* 높이 100% */
+    height: 100%;
+}
+/* 결합 선택자 : 상위요소로 부터 가고자하는 하위요소로 찾아간다*/
+#content-top .top-text {
+    /* 테투리 결정 */
+    /* border: 1px solid black; */
+}
+/* class선택자 top-text */
+.top-text {
+    /* 넓이 100% */
+    width: 100%;
+}
+/* 결합 선택자 */
+.top-text span{
+    /* 화면출력 */
+    display: block;
+    /* 글자색깔 */
+    color: white;
+    /* 요소 외부 바텀에 10px 준다 */
+    /* margin-bottom: 10px; */
+    /* 요소 내부 위,아래,좌,우 20px 준다 */
+    padding: 20px;
+}
+
+/* 구조 선택자 : 상위요소에 있는 자식요소중 하나를 선택*/
+.top-text>span:nth-child(1){
+    /* 테투리 결정 */
+    /* border: 1px solid black; */
+    /* 서식 위치 결정 */
+    text-align: center;
+    /* 서식 사이즈 결정 */
+    font-size: 41px;
+    /* 서식 글꼴 결정 */
+    font-family: 'C-Light';
+}
+.top-text>span:nth-child(2){
+    /* 태투리 결정 */
+    /* border: 1px solid black; */
+    /* 서식 위치 결정 */
+    text-align: center;
+    /* 서식 사이즈 결정 */
+    font-size: 28px;
+}
+.top-text>span:nth-child(3){
+    /* 태투리 결정 */
+    /* border: 1px solid black; */
+    /* 서식 위치 결정 */
+    text-align: center;
+    /* 서식 사이즈 결정 */
+    font-size: 46px;
+    /* 서식 굵기 결정 */
+    font-weight: 700;
+}
+
+
+/* Content-Mid 구간 */
+#content-mid{
+    /* 높이 결정 */
+    height: auto;
+    /* background-color: aqua; */
+}
+
+/* Mid-TOP 위치 */
+.content-mid-top {
+    /* 넓이 결정 */
+    width: 100%;
+    /* 높이 결정 */
+    height: auto;
+    /* 태투리 결정 */
+    /* border: 2px solid purple; */
+    /* 화면 출력 가로 정렬 고정 */
+    display: flex;
+}
+.content-mid-left {
+    /* 넓이 결정 */
+    width: 50%;
+    /* 높이 결정 */
+    height: auto;
+    /* border: 2px solid red; */
+}
+/* class선택자 content-mid-left는 자식요소인 img 찾아간다 */
+.content-mid-left>img {
+    /* 넓이 */
+    width: 658px;
+    /* 높이 */
+    height: 827px;
+    /* 요소 외부 위,아래 0, 좌,우 109 */
+    margin: 0 109px;
+    /* 요소 외부 위 결정 */
+    margin-top: 70px;
+}
+
+.mid-text {
+    margin-top:110px 60px;
+    /* border: 1px solid black; */
+}
+/* class선택자 content-mid-top은 하위요소중에 .mid-text찾아서 자식요소span태그를 이동한다 */
+.content-mid-top .mid-text>span {
+    /* 넓이 */
+    width: 100%;
+    /* border: 1px solid black; */
+}
+
+/* class선택자 content-mid-top은 하위요소중에 .mid-text찾아서 자식요소span태그를 구조선택자에 1번째 지정 */
+.content-mid-top .mid-text>span:nth-child(1) {
+    /* 넓이 */
+    width: 100%;
+    margin-bottom: 20px;
+    /* border: 1px solid black; */
+    /* 클자 크기 */
+    font-size: 40px;
+    /* 글자 색 */
+    color: orange;
+    /* 글자 굵기 */
+    font-weight: 700;
+}
+
+/* class선택자 content-mid-top은 하위요소중에 .mid-text찾아서 자식요소span태그를 구조선택자에 2번째 지정 */
+.content-mid-top .mid-text>span:nth-child(2) {
+    /* 넓이 */
+    width: 100%;
+    margin-bottom: 20px;
+    /* border: 1px solid black; */
+    font-size: 20px;
+}
+/* class선택자 content-mid-top은 하위요소중에 .mid-text찾아서 자식요소span태그를 구조선택자에 3번째 지정 */
+.content-mid-top .mid-text>span:nth-child(3) {
+    /* 글자 크기 */
+    font-size: 20px;
+}
+
+.content-mid-top .mid-text {
+    /* 테두리 */
+    /* border: 3px solid slategrey; */
+    /* 요소 외부 위,아래 0, 좌,우 109px*/
+    margin: 0px 109px;
+    /* 요소 외부 위 */
+    margin-top: 60px;    
+}
+
+/* class 선택자 */
+.content-mid-right {
+    /* 넓이 */
+    width: 50%;
+    /* 높이 */
+    height: auto;
+    /* 테두리 */
+    /* border: 2px solid orange; */
+}
+/* 해당class선택자로부터 하위요소 img 찾기 */
+.content-mid-right img {
+    /* 넓이 */
+    width: 879px;
+    /* 높이 */
+    height: 641px;
+    /* 요소 외부 좌 */
+    margin-left: -50px;
+    margin-top: 200px;
+}
+
+
+
+/* Mid-bottom 위치 */
+.content-mid-bottom {
+    /* 넓이 */
+    width: 100%;
+    /* 테두리 */
+    /* border: 2px solid crimson; */
+    /* 화면출력 가로 지정 */
+    display: flex;
+    margin-top: 10%;
+}
+
+/* class */
+.bottom-left {
+    /* 넓이 */
+    width: 50%;
+    /* border: 2px solid violet; */
+    /* 요소 내부 위 지정 */
+    padding-top: 50px;
+    /* 해당요소 위치를 기준(부모)으로 정한다 */
+    position: relative;
+}
+/* class선택자 bottom-left의 하위요소 img에 구조선택자 첫번째 지정 */
+.bottom-left img:nth-child(1) {
+    /* 널이 */
+    width: 800px;
+    /* 높이 */
+    height: 583px;
+    /* 요소의 외부 좌측 */
+    margin-left: 50px;
+    /* 요소의 외부 아래 */
+    margin-bottom: 300px ;
+}
+/* class선택자 bottom-left의 하위요소 img에 구조선택자 두번째 지정 */
+.bottom-left img:nth-child(2) {
+    /* 널이 */
+    width: 325px;
+    /* 높이 */
+    height: 408px;
+    /* 해당요소 위치를 상위요소 위치로 정하거나 독립적인 위치로 정한다*/
+    position: absolute;
+    /* 현위치에서 우측, 위 결정 */
+    right: 0; top: 425px;
+}
+
+/* class선택자 */
+.bottom-right {
+    /* 넓이 */
+    width: 50%;
+    /* 테두리 */
+    /* border: 2px solid peru; */
+    /* 요소 외부 10% */
+    margin-top: 10%;
+}
+
+.bottom-right .bottom-text {
+    /* 테두리  */
+    /* border: 2px solid red; */
+    /* 요소 외부 위,아래 0/ 좌,우 123px */
+    margin: 0 123px;
+}
+/* 상위선택자 bottom-right를 하위선택자 bottom-text로가서 자식요소 p 찾아간다 */
+.bottom-right .bottom-text>p {
+    /* 태투리 */
+    /* border:1px solid black; */
+    /* 화면출력 가로 고정 */
+    display: flex;
+}
+.bottom-text {
+    /* 넓이 */
+    width: 700px;
+    /* 테두리 */
+    /* border: 1px solid black; */
+}
+
+/* p1의 자식요소 */
+/* 상위선택자 bottom-rigth가 하위선택자 bottom-text의 자식요소p를 구조선택자 첫번째 지정 */
+.bottom-right .bottom-text>p:nth-child(1) {
+    /* 넓이 오토 */
+    width: auto;
+    /* 요소의 아이탬을 중앙 왼쪽배치한상태에서 중앙 정렬 */
+    align-items: center;
+    /* 요소외부 아래 5% */
+    margin-bottom: 5%;
+    /* border: 1px solid black; */
+}
+/* 상위선택자 bottom-rigth가 하위선택자 bottom-text의 자식요소p의 구조선택자 첫번째 지정 후 자식요소 span에 구조선택자 처번째 지정 */
+.bottom-right .bottom-text>p:nth-child(1)>span:nth-child(1) {
+    /* 태두리 아래 결정 */
+    border-bottom: 1px solid #ff812c;
+    /* 외부 왼쪽 */
+    margin-left: 5%;
+    /* 서식 크기 */
+    font-size: 150px;
+    /* 서식 색 */
+    color: #ff812c;
+    /* 서식 굵기 */
+    font-family: 'C-Light';
+    /* 요소의 라인 결정 */
+    line-height: 130px;
+}
+/* 상위선택자 bottom-rigth가 하위선택자 bottom-text의 자식요소p의 구조선택자 첫번째 지정 후 자식요소 span에 구조선택자 두번째 지정 */
+.bottom-right .bottom-text>p:nth-child(1)>span:nth-child(2) {
+    /* border: 1px solid black; */
+    /* 글자 크기 */
+    font-size: 24px;
+    /* 글자 색 */
+    color: #ff812c;
+    /* 외부 위 */
+    margin-top: 40px;
+    /* 내부 좌 */
+    padding-left: 3%;
+    /* 서식 위치 */
+    text-align: left;
+    /* 서식 간격 */
+    letter-spacing: -3px;
+}
+
+/* p2의 자식요소 */
+/* 상위선택자 bottom-rigth가 하위선택자 bottom-text의 자식요소p의 구조선택자 두번째 지정 */
+.bottom-right .bottom-text>p:nth-child(2) {
+    /* 넓이 자동 */
+    width: auto;
+    /* 아이탬 왼족배치상태에서 중앙 정렬 */
+    align-items: center;
+    /* 서식 크기 */
+    font-size: 30px;
+    /* border: 1px solid black; */
+}
+/* 상위선택자 bottom-rigth가 하위선택자 bottom-text의 자식요소p의 구조선택자 두번째 지정후 자식요소 span 지정 */
+.bottom-right .bottom-text>p:nth-child(2)>span {
+    /* border:1px solid black; */
+    /* 글자 크기 */
+    font-size: 72px;
+    /* 글자 색 */
+    color: #ff812c;
+    /* 글자 굵기 */
+    font-family: 'C-Medium';
+    /* 글자 모양을 기울기 */
+    font-style: oblique;
+    /* 화면 세로 출력 */
+    display: block;
+    /* 요소 높이 간격 */
+    line-height: 90px;
+    /* 높이 */
+    height: 100px;
+}
+
+/* p3의 자식요소 */
+.bottom-right .bottom-text>p:nth-child(3) {
+    /* 넓이 자동 */
+    width: auto;
+    /* 아이탬 왼쪽 배치후 센터 정렬 */
+    align-items: center;
+    /* 요소 세로 배치 */
+    display: block;
+    /* border: 1px solid black; */
+}
+.bottom-right .bottom-text>p:nth-child(3)>span {
+    /* border:1px solid black; */
+    /* 글자 크기 */
+    font-size: 19px;
+    /* 서식 정렬 위치 */
+    text-align: left;
+    /* 서식 글꼴 */
+    font-family: 'Noto Sans KR';
+}
+
+
+
+/* Content-Bottom 구간 */
+#content-bottom{
+    /* 배경색 이미지를 외부로부터 자원을 가져온다 */
+    background-image: url('../image/KakaoTalk_20221214_114740406.jpg');
+    /* 배경색 사이즈를 해당영역맞게 배치한다 */
+    background-size: cover;
+    /* border: 2px solid darkblue; */
+    /* 해당요소 위치를 기준으로 한다 */
+    position: relative;
+}
+
+#content-bottom-title{
+    /* 요소 내부 결정 */
+    padding: 5px;
+    /* 요소 내부 위 */
+    padding-top: 100px;
+}
+/* 상위요소에서 자식요소인 span,p 지정 */
+#content-bottom-title>span,p {
+    /* 요소 세로 배치 */
+    display: block;
+    /* 서식 위치 결정 */
+    text-align: center;
+}
+#content-bottom-title>span:nth-child(1){
+    /* border: 1px solid black; */
+    /* 서식 크기 */
+    font-size: 120px;
+    /* 서식 글꼴 */
+    font-family: 'C-Light';
+    /* 서식 모영 기울기 */
+    font-style: oblique;
+    /* 요소위치 상위요소 배치, 독립적 배치 */
+    position: absolute;
+    /* 왼; 위 위치 결정 */
+    left: 453px; top: 30px;
+    /* 외부 요소 */
+    margin: 0;
+    /* 서식 색 */
+    color: lightgray;
+    /* 투명도 */
+    opacity: 0.4;
+}
+#content-bottom-title>span:nth-child(2){
+    /* border: 1px solid black; */
+    /* 서식 크기 */
+    font-size: 70px;
+    /* 서식 굵기 */
+    font-weight: 900;
+    /* 서식 색 */
+    color: white;
+    /* 서식 간격 */
+    letter-spacing:-5.5px;
+    /* 우선순위 */
+    z-index: 1;
+    /* 요소 외부 아래 */
+    margin-bottom: 35px;
+    /* 요소 외부위치 결정 */
+    margin: 0 auto;
+    /* 요소 외부 아래 */
+    margin-bottom: 10px;
+}
+#content-bottom-title>p{
+    /* border: 1px solid black; */
+    /* 서식 크기 */
+    font-size: 28px;
+    /* 서식 색 */
+    color: white;
+    /* 서식 간격 */
+    letter-spacing:-1.5px;
+    /* 요소 외부 */
+    margin: 0 auto;
+}
+
+
+/* SLIDE 구간 */
+#content-bottom-slide{
+    /* 요소 넓이 */
+    width: 100%;
+    /* 요소 높이 자동 */
+    height: auto;
+    /* 태두리 */
+    /* background-color: steelblue; */
+    /* 요소 내부 위,아래:150px / 좌,우:200px */
+    padding: 150px 200px;
+}
+
+#content-bottom-slide img{
+    /* 해당요소 위치를 기준 */
+    position: relative;
+    /* 넓이 */
+    width:100%;
+    /* 높이 */
+    height: 90%;
+}
+
+/* 상위선택자로부터 자식요소인 div를 구조선택후 2번째 위치 결정 */
+#content-bottom-slide>div:nth-child(2) {
+    /* 넓이 */
+    width: 100%;
+    /* 높이 */
+    height: 653px;
+}
